@@ -3,159 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POS Pro - Tu Sistema de Ventas Definitivo</title>
+    <title>XimelPos - Tu Sistema de Ventas Definitivo</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
     <style>
         body {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-            background-color: #fafafa;
-        }
-        main {
-            flex: 1 0 auto;
-        }
-        .hero-section {
-            background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
-            color: white;
-            padding: 80px 0;
-        }
-        .hero-section h1 {
-            font-weight: 300;
+            background-color: #f8f9fa;
         }
         .feature-icon {
             font-size: 4rem;
-            color: #1976d2;
-            margin-bottom: 20px;
+            color: #0d6efd; /* Azul Bootstrap */
+            margin-bottom: 1rem;
         }
-        .buy-section {
-            background-color: #ffffff;
-            padding: 60px 0;
+        
+        /* Configuración del Carrusel */
+        .carousel-item {
+            height: 70vh;
+            min-height: 400px;
+            background-color: #212529; /* Fondo oscuro por si la imagen tarda en cargar */
+        }
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            opacity: 0.5; /* Oscurece la imagen para que el texto sea legible */
+        }
+        .carousel-caption {
+            bottom: 30%;
+        }
+        .carousel-caption h1 {
+            font-weight: 300;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .carousel-caption p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
     </style>
 </head>
 <body>
 
-    <nav class="blue darken-3">
-        <div class="nav-wrapper container">
-            <a href="#" class="brand-logo">POS Pro</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#caracteristicas">Características</a></li>
-                <li><a href="#tecnologia">Tecnología</a></li>
-                <li><a href="#comprar" class="waves-effect waves-light btn white blue-text text-darken-3">Adquirir Ahora</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">POS Pro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tecnologia">Tecnología</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-light text-primary fw-bold rounded-pill px-4" href="#comprar">Adquirir Ahora</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <main>
-        <div class="hero-section center-align z-depth-1">
-            <div class="container">
-                <h1>El Sistema de Ventas que tu Negocio Necesita</h1>
-                <h5 class="light">Gestiona tus ventas, controla tu inventario y fideliza a tus clientes desde una sola plataforma ágil y moderna.</h5>
-                <br>
-                <a href="#comprar" class="waves-effect waves-light btn-large orange darken-2"><i class="material-icons left">shopping_cart</i>Comprar Licencia</a>
-                <a href="#caracteristicas" class="waves-effect waves-light btn-large transparent z-depth-0" style="border: 1px solid white; margin-left: 10px;">Saber más</a>
+    <header id="inicio" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#inicio" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#inicio" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#inicio" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/1920/1080?random=1" class="d-block w-100" alt="Pantalla de Ventas">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Agiliza tus Ventas</h1>
+                    <p>Interfaz intuitiva para un proceso de cobro rápido y sin complicaciones.</p>
+                    <a href="#comprar" class="btn btn-warning btn-lg rounded-pill mt-3 px-4">Comprar Licencia</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1920/1080?random=2" class="d-block w-100" alt="Módulo de Inventario">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Control Total de Inventario</h1>
+                    <p>Gestiona stock, entradas, salidas y recibe alertas en tiempo real.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/1920/1080?random=3" class="d-block w-100" alt="Sistema de Fidelización">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Fideliza a tus Clientes</h1>
+                    <p>Sistema de puntos integrado para premiar a tus compradores recurrentes.</p>
+                </div>
             </div>
         </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#inicio" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#inicio" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </header>
 
-        <div id="caracteristicas" class="container" style="padding-top: 50px; padding-bottom: 50px;">
-            <h3 class="center-align light">¿Por qué elegir POS Pro?</h3>
-            <div class="row" style="margin-top: 40px;">
-                <div class="col s12 m4 center-align">
+    <section id="caracteristicas" class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center fw-light mb-5">¿Por qué elegir POS Pro?</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
                     <i class="material-icons feature-icon">point_of_sale</i>
-                    <h5>Punto de Venta Ágil</h5>
-                    <p class="light">Interfaz limpia e intuitiva diseñada para agilizar el proceso de cobro. Atiende a tus clientes sin demoras, soporta múltiples métodos de pago y emite tickets al instante.</p>
+                    <h4 class="fw-normal">Punto de Venta Ágil</h4>
+                    <p class="text-muted">Atiende a tus clientes sin demoras, soporta múltiples métodos de pago y emite tickets al instante.</p>
                 </div>
-                <div class="col s12 m4 center-align">
+                <div class="col-md-4">
                     <i class="material-icons feature-icon">inventory</i>
-                    <h5>Control de Inventario Real</h5>
-                    <p class="light">Maneja diferentes tipos de productos con facilidad. Obtén alertas de stock bajo, gestiona entradas y salidas, y mantén tu almacén siempre bajo control absoluto.</p>
+                    <h4 class="fw-normal">Inventario en Tiempo Real</h4>
+                    <p class="text-muted">Obtén alertas de stock bajo, gestiona entradas y mantén tu almacén siempre bajo control absoluto.</p>
                 </div>
-                <div class="col s12 m4 center-align">
+                <div class="col-md-4">
                     <i class="material-icons feature-icon">card_giftcard</i>
-                    <h5>Puntos de Fidelidad</h5>
-                    <p class="light">Integra un sistema de puntos para recompensar a tus compradores recurrentes. Configura reglas de canje y haz que tus clientes regresen una y otra vez.</p>
+                    <h4 class="fw-normal">Puntos de Fidelidad</h4>
+                    <p class="text-muted">Configura reglas de canje y haz que tus clientes regresen una y otra vez con nuestro sistema de recompensas.</p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="divider"></div>
+    <hr class="container">
 
-        <div id="tecnologia" class="container" style="padding-top: 50px; padding-bottom: 50px;">
-            <div class="row valign-wrapper">
-                <div class="col s12 m6">
-                    <h4 class="light">Arquitectura Robusta y Escalable</h4>
-                    <p class="light">El núcleo de la aplicación está desarrollado con la solidez de Java, garantizando un rendimiento estable y seguro, capaz de procesar grandes volúmenes de transacciones sin caídas. Ideal para crecer a la par de tu negocio.</p>
-                    <ul class="collection">
-                        <li class="collection-item"><i class="material-icons left green-text">check_circle</i> Base de datos optimizada para ventas diarias.</li>
-                        <li class="collection-item"><i class="material-icons left green-text">check_circle</i> Arquitectura de grado empresarial.</li>
-                        <li class="collection-item"><i class="material-icons left green-text">check_circle</i> Actualizaciones constantes y soporte técnico.</li>
+    <section id="tecnologia" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3 class="fw-light mb-4">Arquitectura Robusta en Java</h3>
+                    <p class="text-muted fs-5">El núcleo de la aplicación está desarrollado garantizando un rendimiento estable y seguro, capaz de procesar grandes volúmenes de transacciones diarias sin caídas.</p>
+                    <ul class="list-group list-group-flush mt-4">
+                        <li class="list-group-item bg-transparent border-0 px-0 d-flex align-items-center">
+                            <i class="material-icons text-success me-3">check_circle</i> Base de datos optimizada para alta concurrencia.
+                        </li>
+                        <li class="list-group-item bg-transparent border-0 px-0 d-flex align-items-center">
+                            <i class="material-icons text-success me-3">check_circle</i> Fácil instalación y despliegue en cualquier entorno operativo.
+                        </li>
+                        <li class="list-group-item bg-transparent border-0 px-0 d-flex align-items-center">
+                            <i class="material-icons text-success me-3">check_circle</i> Lógica de negocio escalable.
+                        </li>
                     </ul>
                 </div>
-                <div class="col s12 m6 center-align">
-                    <i class="material-icons" style="font-size: 10rem; color: #9e9e9e;">developer_board</i>
+                <div class="col-lg-6 text-center">
+                    <i class="material-icons text-secondary" style="font-size: 12rem;">developer_board</i>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div id="comprar" class="buy-section z-depth-1">
-            <div class="container center-align">
-                <h3 class="light">Empieza a optimizar tu negocio hoy</h3>
-                <p class="light" style="font-size: 1.2rem; margin-bottom: 40px;">Licencia de pago único sin cuotas mensuales ocultas. Todo el código, todas las funciones.</p>
-                
-                <div class="row">
-                    <div class="col s12 m6 offset-m3">
-                        <div class="card hoverable">
-                            <div class="card-content">
-                                <span class="card-title">Licencia Completa</span>
-                                <h2 class="blue-text text-darken-3">$149<span style="font-size: 1.5rem; color: #9e9e9e;"> USD</span></h2>
-                                <p>Acceso total al sistema POS, módulo de inventario avanzado y sistema de fidelización de clientes.</p>
-                            </div>
-                            <div class="card-action">
-                                <a href="mailto:tu-correo@email.com" class="waves-effect waves-light btn-large blue darken-3" style="width: 100%;">Contactar al Desarrollador</a>
-                            </div>
+    <section id="comprar" class="py-5 bg-light">
+        <div class="container py-5 text-center">
+            <h2 class="fw-light mb-3">Empieza a optimizar tu negocio hoy</h2>
+            <p class="text-muted fs-5 mb-5">Licencia de pago único. Sin cuotas mensuales ocultas.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="card shadow border-0 rounded-4">
+                        <div class="card-body p-5">
+                            <h4 class="card-title text-muted mb-3">Licencia Completa</h4>
+                            <h1 class="display-4 fw-bold text-primary mb-4">$149<span class="fs-5 text-muted fw-normal"> USD</span></h1>
+                            <p class="card-text text-muted mb-4">Acceso total al sistema POS, módulo de inventario avanzado y sistema de fidelización de clientes.</p>
+                            <a href="mailto:tu-correo@email.com" class="btn btn-primary btn-lg w-100 rounded-pill">Contactar al Desarrollador</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="page-footer blue darken-4">
+    <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Acerca del Sistema</h5>
-                    <p class="grey-text text-lighten-4">Software diseñado para modernizar puntos de venta, creado con tecnología robusta y enfocado en la usabilidad.</p>
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-3">XimelPos</h5>
+                    <p class="text-white-50">Software diseñado para modernizar puntos de venta, creado con tecnología robusta y enfocado en la usabilidad.</p>
                 </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Enlaces Rápidos</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#caracteristicas">Características</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#tecnologia">Detalles Técnicos</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#comprar">Adquirir Licencia</a></li>
+                <div class="col-md-3 offset-md-3">
+                    <h5 class="text-uppercase mb-3">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#caracteristicas" class="text-white-50 text-decoration-none">Características</a></li>
+                        <li><a href="#tecnologia" class="text-white-50 text-decoration-none">Tecnología</a></li>
+                        <li><a href="#comprar" class="text-white-50 text-decoration-none">Comprar</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-            © 2026 POS Pro. Todos los derechos reservados.
+            <hr class="text-white-50 my-4">
+            <div class="text-center text-white-50">
+                <small>&copy; 2026 Ximel Pos. Todos los derechos reservados.</small>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        // Inicialización de componentes si llegaras a necesitar modals o sidenavs
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems);
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
