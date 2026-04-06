@@ -1,0 +1,44 @@
+/* Configuración del Carrusel */
+.carousel-item {
+    height: 55vh; /* Altura un poco más pequeña para móviles */
+    min-height: 350px;
+    background-color: #212529;
+}
+.carousel-item img {
+    object-fit: contain; /* Muestra la imagen completa sin recortes ni zoom */
+    height: 100%;
+    width: 100%;
+    opacity: 0.4; /* Un poco más oscuro para resaltar bien los textos en móviles */
+}
+.carousel-caption {
+    bottom: 10%; /* Lo bajamos un poco en móviles para que no tape la imagen central */
+}
+.carousel-caption h1 {
+    font-weight: 300;
+    font-size: 2rem; /* Letra más pequeña para que quepa en celulares */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+.carousel-caption p {
+    font-size: 1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+}
+
+/* Ajustes para pantallas medianas y grandes (Tablets y PCs) */
+@media (min-width: 768px) {
+    .carousel-item {
+        height: 70vh;
+        min-height: 400px;
+    }
+    .carousel-item img {
+        opacity: 0.5;
+    }
+    .carousel-caption {
+        bottom: 25%;
+    }
+    .carousel-caption h1 {
+        font-size: 3.5rem; /* Vuelve a tu tamaño original en PC */
+    }
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+}
